@@ -1,0 +1,44 @@
+
+.imgLightbox{
+    width: 350px;
+    height: 380px;
+    border-radius: 20px;
+    padding: 10px;
+    border: 5px solid#ff7d1a;
+}
+
+.miniPictures {
+    margin-top: 20px;
+}
+
+.miniPictures img{
+    width: 70px;
+    height: 72px;
+    border-radius: 16px;
+    padding: 5px;
+    margin: 4px;
+    border: 2px solid#ff7d1a;
+}
+
+.miniPictures img:hover{
+    filter: opacity(.3);
+    cursor: pointer;
+    border: 2px solid#ff7d1a;
+}
+
+@media (max-width: 600px) {
+
+    .imgLightbox{
+        width: 270px;
+        height: 300px;
+    }
+    
+    .miniPictures {
+        margin-top: 20px;
+    }
+    
+    .miniPictures img{
+        width: 52px;
+        height: 72px;
+    }
+}

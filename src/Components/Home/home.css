@@ -1,0 +1,225 @@
+.containerSearcher {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 100px;
+}
+
+/* styles of searcher */
+.sectionSearcher {
+    animation: moverArriba 1s ease-in;
+}
+
+.searcher {
+    margin: 30px 30px;
+    padding: 6px 100px;
+    font-size: 1.5rem;
+    border: 2px solid #f36f04;
+    border-radius: 10px;
+}
+
+.btnSearcher {
+    font-size: 1rem;
+    border: none;
+    margin-left: 0px;
+    padding: 12px;
+    border-radius: 10px;
+    color: #ffffff;
+    background: #f36f04;
+    cursor: pointer;
+}
+
+.btnSearcher:hover {
+    color: #000000;
+    background: transparent;
+    border: 2px solid #f36f04;
+}
+
+.sectionInformation {
+    animation: moverDerecha 1s ease-in;
+}
+
+.information {
+    font-size: 1.6rem;
+    padding: 50px 120px 0px 0px;
+}
+
+.btnSeeProducts {
+    position: relative;
+    display: inline-block;
+    top: 80px;
+    left: 160px;
+    width: 200px;
+    height: 60px;
+    border: none;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 1.4rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    background: #ff7d1a;
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 8px rgb(0, 0, 0);
+}
+
+.btnSeeProducts:active {
+    box-shadow: 0 5px rgb(141, 141, 141);
+    transform: translateY(6px);
+}
+
+/* buttom of see more products */
+
+.boxMoreProducts {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.btnMoreProducts {
+    border: none;
+    padding: 10px 40px;
+    font-size: 1.2rem;
+    color: #ffffff;
+    background: #f36f04;
+    border-radius: 20px;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+.btnMoreProducts:hover {
+    background: transparent;
+    color: #f36f04;
+    border: 2px solid #f36f04;
+    font-weight: bold;
+}
+
+.message {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.message::first-letter {
+    font-weight: normal;
+
+}
+
+/* style for information and buttom show more */
+
+.imgCoverPage {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 460px;
+    animation: moverIzquierda 1s ease-in;
+}
+
+@keyframes moverArriba {
+    0% {
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moverIzquierda {
+    0% {
+        opacity: 0;
+        transform: translateX(200px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moverDerecha {
+    0% {
+        opacity: 0;
+        transform: translateX(-200px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+/* responsive */
+
+@media (max-width: 600px) {
+
+    .containerSearcher {
+        display: flex;
+        justify-content: center;
+        padding: 90px 10px 50px 10px;
+        flex-wrap: wrap;
+    }
+
+    /* styles of searcher */
+    .sectionSearcher {
+        animation: moverArriba 1s ease-in;
+    }
+
+    .searcher {
+        margin: 10px 40px;
+        padding: 6px 30px;
+        font-size: 1rem;
+    }
+
+    .option {
+        font-size: 0.800rem;
+    }
+
+    .btnSearcher {
+        font-size: 1rem;
+        padding: 8px;
+    }
+
+    .sectionInformation {
+        animation: moverDerecha 1s ease-in;
+    }
+
+    .information {
+        text-align: justify;
+        font-size: 1.6rem;
+        padding: 30px;
+    }
+
+    .btnSeeProducts {
+        position: relative;
+        display: inline-block;
+        top: 10px;
+        left: 90px;
+        width: 180px;
+        height: 45px;
+        font-size: 0.900rem;
+    }
+
+    .imgCoverPage {
+        position: relative;
+        top: 50px;
+        left: 0px;
+        width: 240px;
+        animation: moverIzquierda 1s ease-in;
+    }
+
+    .boxMoreProducts {
+        margin-bottom: 40px;
+    }
+
+    .btnMoreProducts {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    .message {
+        text-align: center;
+        font-size: 1.3rem;
+        font-weight: bold;
+    }
+}

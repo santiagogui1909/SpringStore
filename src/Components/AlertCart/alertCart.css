@@ -1,0 +1,44 @@
+.containerAlertCart{
+    position: fixed;
+    width: 400px;
+    height: 50px;
+    top: 80px;
+    margin: 40px;
+    text-align: center;
+    border-radius: 30px;
+    color: rgb(255, 255, 255);
+    animation: showAlert 3s ease-in;
+}
+
+.containerAlertCart p{
+    font-size: 1.6rem;
+    padding: 5px;
+    text-transform: capitalize;
+}
+
+@keyframes showAlert {
+
+    50%{
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+@media (max-width: 600px) {
+    .containerAlertCart{
+        position: fixed;
+        width: 300px;
+        height: 40px;
+        top: 70px;
+        margin: 20px;
+        text-align: center;
+        animation: showAlert 3s ease-in-out;
+    }
+    
+    .containerAlertCart p{
+        font-size: 1rem;
+        padding: 4px;
+    }
+}
