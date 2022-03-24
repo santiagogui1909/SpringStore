@@ -1,0 +1,198 @@
+.containerListProducts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 40px;
+}
+
+.targetProduct {
+    width: 280px;
+    height: 280px;
+    display: inline-block;
+    margin: 20px 60px 200px 60px;
+    text-align: center;
+    box-shadow: 0px 2px 12px black;
+    border-radius: 25px;
+    border: 3px solid #ff7d1a;
+}
+
+.targetInfoProduct {
+    width: 100%;
+    height: 60%;
+}
+
+.titleListProduct {
+    padding: 40px 10px 0px 10px;
+    font-size: 0.800rem;
+    color: #000000;
+    letter-spacing: 1px;
+}
+
+.btnsProducts {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.btnDetails {
+    background: #5a5a5a;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    padding: 6px 8px;
+    border: none;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.btnAdd {
+    color: #ffffff;
+    background: #2a8a0d;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    padding: 6px 8px;
+    border: none;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.btnDetails:hover {
+    background: #000000;
+}
+
+.btnAdd:hover {
+    background: #000000;
+}
+
+.link {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.priceCard {
+    font-size: 1.2rem;
+    color: #000000;
+    text-decoration: 3px underline #f08b08;
+}
+
+.priceCard::first-letter {
+    font-size: 1.1rem;
+    color: #18b920;
+    font-weight: bold;
+}
+
+.imgProduct {
+    width: 160px;
+    height: 170px;
+    padding: 30px;
+}
+
+/* style for the button of go top */
+
+.btnTop {
+    position: fixed;
+    width: 50px;
+    height: 60px;
+    font-size: 1.3rem;
+    top: 580px;
+    right: 30px;
+    border: none;
+    border-radius: 20px;
+    background: #000000;
+    color: #ffffff;
+    cursor: pointer;
+    animation: moverIzquierda 1s ease-in;
+}
+
+.icon-up-big {
+    animation: bucleArriba 4s ease-in;
+    animation-iteration-count: infinite;
+}
+
+@keyframes moverArriba {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes bucleArriba {
+    0% {
+        opacity: 0.2;
+        transform: translateY(100px);
+        color: #f08b08;
+    }
+
+    50% {
+        opacity: 1;
+        transform: translate(0);
+        color: #ffffff;
+    }
+
+    100% {
+        opacity: 0.2;
+        transform: translateY(100px);
+        color: #f08b08;
+    }
+}
+
+/* responsive */
+
+@media (max-width: 600px) {
+
+    .containerListProducts {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-top: 100px;
+    }
+
+    .targetProduct {
+        width: 220px;
+        height: 270px;
+        display: inline-block;
+        margin: 20px 20px 160px 20px;
+    }
+
+    .titleListProduct {
+        padding: 50px 0px 10px 0px;
+        font-size: 0.820rem;
+    }
+
+
+    .btnsProducts {
+        margin: 5px;
+    }
+
+    .btnDetails {
+        font-size: 0.900rem;
+        padding: 10px 8px;
+    }
+
+    .btnAdd {
+        font-size: 0.900rem;
+        padding: 10px 8px;
+    }
+
+    .imgProduct {
+        width: 120px;
+        height: 140px;
+        padding: 30px;
+    }
+
+    /* style for the button of go top */
+
+    .btnTop {
+        right: 8px;
+    }
+
+    .scroll {
+        display: none;
+        transition: all 2s ease;
+    }
+
+}

@@ -1,24 +1,15 @@
-import logo from './logo.svg';
+import Routers from './Router/index';
+import ProductsProvider from './Context/Provider';
+import "./fontello/css/fontello.css";
+
 import './App.css';
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn Reactt
-        </a>
-      </header>
-    </div>
+    <ProductsProvider>
+      <Routers />
+    </ProductsProvider>
   );
 }
 

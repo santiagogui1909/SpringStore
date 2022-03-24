@@ -1,0 +1,183 @@
+
+.containerProducts{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.lightBox{
+    margin: 20px 120px;
+}
+
+/* section rigth */
+.informationProduct{
+    margin: 0px 40px;
+    padding:30px;
+}
+
+.titleProduct{
+    font-size: 2rem;
+    letter-spacing: 1px;
+    font-weight: 800px;
+    padding: 10px 50px;
+}
+
+.titleProduct::first-letter{
+    color:#ff7d1a;
+    font-size: 2.4rem;
+    text-transform: capitalize;
+}
+
+.description{
+    font-size: 1.2rem;
+    padding: 6px 20px 20px 20px;
+}
+
+.price{
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 1.4rem;
+    padding: 0px 20px;
+    color: #fb6f04;
+}
+
+.finalPrice{
+    color: #000000;
+}
+
+.price span:nth-child(2){
+    color: #555555;
+    text-decoration:2px line-through #ff0000;
+    font-size: 1.2rem;
+}
+
+.price span:nth-child(3){
+    color: #fb0505;
+    font-size: 1.3rem;
+}
+
+strong{
+    font-size: 1.4rem;
+    padding: 5px;
+    color: #10ad10;
+}
+
+/* styles for the buttoms of pagination and buttom cart  */
+
+.boxbuttomsCart{
+    display: flex;
+    justify-content: space-around;
+    padding: 24px;
+    margin: 40px 0px;
+    background:  hsl(219, 9%, 45%);
+    border-radius: 10px;
+}
+
+.boxButtoms{
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttomsImg{
+    width: 25px;
+    height: 20px;
+    margin: 12px 90px 0px 0px;
+}
+
+.buttomsImg:hover{
+    cursor: pointer;
+}
+
+.count{
+    position: relative;
+    right: 40px;
+    top: 5px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.btnAddCart {
+    display: inline-block;
+    padding: 10px 60px;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    background: #ff7d1a;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 8px rgb(255, 255, 255);
+}
+
+.btnAddCart:active {
+    box-shadow: 0 5px rgb(41, 41, 41);
+    transform: translateY(4px);
+}
+
+
+@media (max-width: 600px) {
+
+    .containerProducts{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .lightBox{
+        margin: 120px 50px 0px 50px;
+    }
+    
+    /* section rigth */
+    .informationProduct{
+        margin: 0px 0px;
+        padding:0px;
+    }
+    
+    .titleProduct{
+        font-size: 1.2rem; 
+        padding: 10px 50px;
+    }
+    
+    .titleProduct::first-letter{
+        font-size: 2rem;
+    }
+    
+    .description{
+        font-size: 1.2rem;
+        padding: 24px;
+    }
+    
+    .price{
+        font-size: 1.3rem;
+        text-align: center;
+    }
+    
+    .price::first-letter{
+        font-size: 1.4rem;
+    }
+
+    .boxbuttomsCart{
+        padding: 25px 20px;
+        margin: 30px 10px 10px 10px;
+    }
+    
+    .buttomsImg{
+        width: 14px;
+        height: 14px;
+        margin: 12px 20px 0px 20px;
+    }
+    
+    .count{
+        position: relative;
+        right: 0px;
+        top: 5px;
+        font-size: 0.900rem;
+    }
+    
+    .btnAddCart {
+        padding: 0px 15px;
+        font-size: 0.800rem;
+    }
+}

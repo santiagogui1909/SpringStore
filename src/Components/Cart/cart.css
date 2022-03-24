@@ -1,0 +1,356 @@
+.containerCart {
+    width: 54%;
+    position: absolute;
+    top: 90px;
+    right: 70px;
+    border-radius: 2px;
+    position: fixed;
+    animation: moverIzquierda 0.6s ease-out;
+    border: 3px solid #000000;
+    border-radius: 8px 8px 0px 0px; 
+    z-index: 1000;
+}
+
+.close {
+    position: absolute;
+    right: -60px;
+    top: -10px;
+    padding: 5px;
+    font-size: 2rem;
+    color: #ff0202;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.sectionCart {
+    width: auto;
+    height: 230px;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    background: #ffffff;
+    z-index: 1000px;
+    border-radius: 18px 18px 0px 0px; 
+}
+
+.sectionCart::-webkit-scrollbar {
+    width: 8px;
+    background: rgb(255, 255, 255);
+}
+
+.sectionCart::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 20px;
+}
+
+.sectionCart::-webkit-scrollbar-thumb {
+    background-color: #ff7d1a;
+    border-radius: 20px;
+}
+
+.tableProd {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+.tableProd tr th {
+    padding: 8px 30px;
+    background: #ff7d1a;
+    color: rgb(255, 255, 255);
+    text-transform: capitalize;
+    border-radius: 5px;
+}
+
+.tableProd tr td {
+    padding: 10px;
+}
+
+.imgCardProd {
+    width: 50px;
+    height: 60px;
+}
+
+.titleCart {
+    font-size: 0.800rem;
+}
+
+.priceCart {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.priceCart::first-letter {
+    font-size: 1rem;
+    color: rgb(32, 126, 15);
+}
+
+.btnDelete {
+    padding: 5px;
+    border: none;
+    font-size: 0.900rem;
+    color: #fff;
+    background: #000000;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+.sectionPay {
+    position: absolute;
+    padding: 10px;
+    width: 97.3%;
+    top: 230px;
+    left: -3px;
+    background: #5c5c5c;
+    border-left: 3px solid #000000;
+    border-bottom: 3px solid #000000;
+    border-right: 3px solid #000000;
+    border-radius: 0px 0px 8px 8px; 
+}
+
+.btnPay {
+    font-size: 0.900rem;
+    margin: 8px;
+    border: none;
+    padding: 10px;
+    color: #ffffff;
+    background: #16901c;
+    border-radius: 6px;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: background 0.8s;
+}
+
+.btnCancel {
+    font-size: 0.900rem;
+    margin: 8px;
+    border: none;
+    padding: 10px;
+    color: #ffffff;
+    background: #ff0202;
+    border-radius: 6px;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: background 0.8s;
+}
+
+.btnCancel:hover , .btnPay:hover {
+    background: #000000;
+}
+
+.total {
+    position: relative;
+    left: 130px;
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+.total span{
+    color: #02ff39;
+    font-weight: bold;
+}
+
+.messageAddProducts {
+    position: absolute;
+    top: 160px;
+    left: 160px;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+/* alert if the user press the button delete */
+
+.alertRemove{
+    position: absolute;
+    width: 400px;
+    height: 180px;
+    top: 70px;
+    left: 22%;
+    text-align: center;
+    color: #ffffff;
+    border-radius: 20px;
+    background-color: #ff7d1a;   
+    box-shadow: 8px 8px 20px #000000;
+}
+
+.alertRemove p {
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #ffffff;
+    text-transform: capitalize;
+}
+
+.imgProductDelete{
+    position: absolute;
+    top: 70px;
+    left: 30px;
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+}
+
+.boxActionsDelect{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 0px;
+}
+
+.btnAlert{
+    border: none;
+    font-size: 0.800rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    padding:8px;
+    margin: 20px;
+    color:#ff7d1a;
+    background:#fbfbfb;
+    border-radius: 12px;
+    box-shadow: 0 8px rgb(0, 0, 0);
+}
+
+.btnAlert:active{
+    box-shadow: 0 5px rgb(141, 141, 141);
+    transform: translateY(4px);
+}
+
+.btnAlert:nth-child(1){
+    background:#ffffff;
+}
+
+.btnAlert:nth-child(2){
+    background:#ffffff;
+}
+
+@media (max-width: 600px) {
+    .containerCart {
+        width: 96%;
+        position: absolute;
+        top: 120px;
+        right: 4px;
+        position: fixed;
+    }
+    
+    .close {
+        position: absolute;
+        right: -6px;
+        top: -50px;
+        font-size: 1.7rem;
+    }
+    
+    .sectionCart {
+        width: auto;
+        height: 200px;
+    }
+    
+    .sectionCart::-webkit-scrollbar {
+        width: 4px;
+    }
+    
+    .tableProd {
+        width: 100%;
+        padding: 4px;
+    }
+    
+    .tableProd tr th {
+        padding: 4px 6px;
+        font-size:0.780rem;
+    }
+    
+    .tableProd tr td {
+        padding: 10px;
+    }
+    
+    .imgCardProd {
+        width: 30px;
+        height: 40px;
+    }
+    
+    .titleCart {
+        font-size: 0.700rem;
+    }
+    
+    .priceCart {
+        font-size: 0.700rem;
+    }
+    
+    .priceCart::first-letter {
+        font-size: 0.850rem;
+    }
+    
+    .btnDelete {
+        padding: 2px;
+        font-size: 0.750rem;
+    }
+    
+    .sectionPay {
+        position: absolute;
+        padding: 0px;
+        width: 100%;
+        top: 200px;
+        left: -3px;
+    }
+    
+    .btnPay {
+        font-size: 0.800rem;
+        margin: 8px;
+        border: none;
+        padding: 6px;
+        transition: background 0.8s;
+    }
+    
+    .btnCancel {
+        font-size: 0.800rem;
+        margin: 8px;
+        border: none;
+        padding: 6px;
+        transition: background 0.8s;
+    }
+    
+    .total {
+        position: relative;
+        left: 30px;
+        font-size: 1rem;
+    }
+    
+    .messageAddProducts {
+        position: absolute;
+        top: 100px;
+        left: 20px;
+        text-align: center;
+        font-size: 1rem;
+    }
+    
+    /* alert if the user press the button delete */
+    
+    .alertRemove{
+        position: absolute;
+        width: 340px;
+        height: 100px;
+        top: 70px;
+        left: 6px;
+    }
+    
+    .alertRemove p {
+        padding: 4px;
+        font-size: 0.900rem;
+    }
+    
+    .imgProductDelete{
+        position: absolute;
+        top: 34px;
+        left: 20px;
+        width: 50px;
+        height: 50px;
+    }
+    
+    .btnAlert{
+        border: none;
+        font-size: 0.700rem;
+        font-weight: bold;
+        text-transform: capitalize;
+        padding:4px;
+        margin: 20px;
+    }
+}
