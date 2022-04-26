@@ -45,8 +45,7 @@ const Searcher = ({ seeMore , seeCategories}) => {
                 </Link>
             </div>
             <div className="sectionInformation">
-                <p className="information">Lorem ipsum dolor sit amet, consectetur adip occurence velit sed diam,
-                    sed diam nonumy eirmod tempor incididunt ut labore.</p>
+                <p className="information">Spring Store you can find everything you are looking for and at the best price, don't think about it anymore and discover everything we have for you</p>
                 <Link activeClass="active" to="listProducts" spy={true}
                     smooth={true}
                     duration={600}>
