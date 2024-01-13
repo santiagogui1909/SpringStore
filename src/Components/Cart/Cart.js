@@ -1,4 +1,5 @@
 import { useState, useContext, useEffect, Fragment } from 'react';
+import {useNavigate} from 'react-router-dom';
 import minus from '../../images/icon-minus.svg'
 import plus from '../../images/icon-plus.svg'
 import productsContext from '../../Context/index';
@@ -8,7 +9,8 @@ import "./cart.css";
 
 const Cart = ({ setShow }) => {
 
-    const { setCart, cart, count, setCount, minusProduct } = useContext(productsContext);
+    const navigate = useNavigate();
+    const { setCart, cart, count, plusProduct, minusProduct } = useContext(productsContext);
     const [IdRemove, setIdRemove] = useState(0);
     const [alertRemove, setAlertRemove] = useState(false);
     const [aceptRemove, setAceptRemove] = useState(false);
@@ -27,7 +29,6 @@ const Cart = ({ setShow }) => {
     }, [IdRemove]);
 
     // function for delete a product selected
-
     useEffect(() => {
         const removeProduct = id => {
             cart.forEach((item, index) => {
@@ -35,7 +36,7 @@ const Cart = ({ setShow }) => {
                     cart.splice(index, 1);
                 }
             })
-            setCart([...cart])
+            setCart([...cart]);
             setAlertRemove(false);
             setAceptRemove(false);
         }
@@ -47,6 +48,17 @@ const Cart = ({ setShow }) => {
         totalProducts(cart);
     }, [cart])
 
+
+    const cancelPayment = () => {
+        setCart([]);
+        setShow(false);
+    }
+
+    const makePayment = () => {
+        navigate('/paymentform')
+        setShow(false);
+    };
+
     return (
         <>
             <span className="icon-window-close close" onClick={() => setShow(false)}></span>
@@ -57,17 +69,18 @@ const Cart = ({ setShow }) => {
                         (cart.length > 0) ?
                             <>
                                 {cart.map(product => {
+
                                     return (
-                                        <article className="sectionCart">
+                                        <article id={product.id} className="sectionCart">
                                             <img className="imgCardProd" src={product?.image}></img>
                                             <section className="infoProdCart">
                                                 <p className="titleCart">{product?.title}</p>
                                                 <p className="priceCart">$ {product?.price}</p>
                                                 <section className="boxButtomSecctionCard">
                                                     <p className="quantity">quantity:</p>
-                                                    <img className="buttomsImgCart" src={minus} onClick={minusProduct}></img>
+                                                    <img className="buttomsImgCart" src={minus} onClick={()=> minusProduct(product.id)} alt="minus"></img>
                                                     <p className="countCart" >{count}</p>
-                                                    <img className="buttomsImgCart" src={plus} onClick={() => setCount(count + 1)}></img>
+                                                    <img className="buttomsImgCart" src={plus} onClick={()=> plusProduct(product.id)} alt="plus"></img>
                                                 </section>
                                             </section>
                                             <img src={deleteImg} className="btnDelete" onClick={() => alertRemoveProd(setIdRemove(product.id))}></img>
@@ -80,8 +93,8 @@ const Cart = ({ setShow }) => {
                     }
                     </section>
                     <section className="sectionPay">
-                        <button className="btnCancel">cancel purchase</button>
-                        <button className="btnPay">to pay</button>
+                        <button className="btnCancel" onClick={()=> cancelPayment()}>cancel purchase</button>
+                        <button className="btnPay" onClick={makePayment}>to pay</button>
                         <label className="total">Total =<span> $ </span>{Math.round(total)}</label>
                     </section>
                 </section>

@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/SpringStoreApp/build/static/css/main.382b2df7.css",
+    "main.js": "/SpringStoreApp/build/static/js/main.58747d4d.js",
+    "static/media/fondoDetails.jpg": "/SpringStoreApp/build/static/media/fondoDetails.cbbfa531efe55e1ddc97.jpg",
+    "static/media/add.mp3": "/SpringStoreApp/build/static/media/add.c04d7b71cdcdd8c8a9f3.mp3",
+    "static/media/alert.mp3": "/SpringStoreApp/build/static/media/alert.bab0f9a242c89650a6fb.mp3",
+    "static/media/logo.png": "/SpringStoreApp/build/static/media/logo.b135532f8fb88915333c.png",
+    "static/media/shopping.png": "/SpringStoreApp/build/static/media/shopping.7283ab7137d77cdba854.png",
+    "static/media/etiqueta.png": "/SpringStoreApp/build/static/media/etiqueta.7de6100d0a9affd5b4b6.png",
+    "static/media/fontello.eot?98916375": "/SpringStoreApp/build/static/media/fontello.71b0403260fd693aac7a.eot",
+    "static/media/fontello.ttf?98916375": "/SpringStoreApp/build/static/media/fontello.7d4994a176c322ceaedf.ttf",
+    "static/media/fontello.svg?98916375": "/SpringStoreApp/build/static/media/fontello.f5b1f2d87f019946b01a.svg",
+    "static/media/fontello.woff?98916375": "/SpringStoreApp/build/static/media/fontello.ea1b095d79ef95505dbf.woff",
+    "static/media/fontello.woff2?98916375": "/SpringStoreApp/build/static/media/fontello.5e1e042a7c73c9c2e1b3.woff2",
+    "index.html": "/SpringStoreApp/build/index.html",
+    "static/media/icon-delete.svg": "/SpringStoreApp/build/static/media/icon-delete.1fd1f1f7d9f8ce5557b44ca3470a18b8.svg",
+    "static/media/icon-plus.svg": "/SpringStoreApp/build/static/media/icon-plus.b297868c5f938612f4f099f9f9d73aea.svg",
+    "static/media/icon-minus.svg": "/SpringStoreApp/build/static/media/icon-minus.f5073aa8273785ecf6b7811630782736.svg",
+    "main.382b2df7.css.map": "/SpringStoreApp/build/static/css/main.382b2df7.css.map",
+    "main.58747d4d.js.map": "/SpringStoreApp/build/static/js/main.58747d4d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.382b2df7.css",
+    "static/js/main.58747d4d.js"
+  ]
+}
