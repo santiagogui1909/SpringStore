@@ -8,6 +8,7 @@ import Home from '../Components/Home/Home';
 import Products from '../Components/BestProducts/BestProducts';
 import ProductsDetail from '../Components/ProductDetail/ProductDetail';
 import CartProd from '../Components/Cart/Cart';
+import PaymentForm from '../Components/PaymentForm/PaymentForm';
 import Footer from '../Components/Footer/Footer';
 
 
@@ -55,6 +56,7 @@ const index = () => {
                 <Routes>
                     <Route exact path="/" element={<Home />} />
                     <Route path="/mostsold" element={<Products />} />
+                    <Route path="/paymentform" element={<PaymentForm />} />
                     <Route path="/productdetail/:id" element={<ProductsDetail />} />
                 </Routes>
             </Router>

@@ -87,8 +87,6 @@ const ProductsProvider = ({ children }) => {
 
     const addCart = (id) => {
 
-        // verify if the product exist
-
         const checkIdProduct = cart.every(item => {
             return item.id !== id
         })
@@ -100,10 +98,12 @@ const ProductsProvider = ({ children }) => {
             const data = products.filter(product => {
                 return product.id === id
             })
+
             soundAdd.play();
             Howler.volume(0.2);
             setShowAlertCart(true);
             setAlertCart("added product 🛒");
+
             setCart([...cart, ...data]);
         } else {
             soundAlert.play();
@@ -116,10 +116,21 @@ const ProductsProvider = ({ children }) => {
         return () => clearTimeout(timer);
     }
 
-    const minusProduct = () => {
+    const minusProduct = (id) => {
         let countMinus = count - 1;
         if (countMinus <= -0) return null;
         setCount(countMinus);
+    }
+
+    const plusProduct = (id) => {
+        setCount(count + 1)
+        updateCountProd(id);
+    }
+
+
+    const updateCountProd = (id) => {
+
+        
     }
 
     // this used to share every function, hook , state or value with useContext and can be used for other components
@@ -134,7 +145,7 @@ const ProductsProvider = ({ children }) => {
             getCategory, category,
             setCart, cart,
             addCart, alertCart, setAlertCart,
-            setCount, count, minusProduct,
+            setCount, count, minusProduct, plusProduct,
             setShowAlertCart, showAlertCart
         }}>
             {children}
